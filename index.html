@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SmartSociety | Complaint Management</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ---------- GLOBAL ---------- */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+section{
+padding:80px 60px;
+}
+
+h2{
+margin-bottom:30px;
+}
+
+/* ---------- NAVBAR ---------- */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:#020617;
+position:sticky;
+top:0;
+}
+
+nav h1{
+color:#38bdf8;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#1e3a8a,#0ea5e9);
+}
+
+.hero h2{
+font-size:48px;
+}
+
+.btn{
+background:white;
+color:#0f172a;
+padding:12px 25px;
+border-radius:25px;
+margin-top:20px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* ---------- DASHBOARD CARDS ---------- */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+/* ---------- FORM ---------- */
+
+form{
+max-width:600px;
+margin:auto;
+}
+
+input, textarea, select{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+}
+
+button{
+background:#38bdf8;
+border:none;
+padding:12px 25px;
+color:white;
+border-radius:25px;
+cursor:pointer;
+}
+
+/* ---------- STATUS TABLE ---------- */
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th, td{
+padding:15px;
+background:#1e293b;
+}
+
+th{
+background:#020617;
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact-card{
+background:#1e293b;
+padding:20px;
+border-radius:12px;
+margin-bottom:15px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<h1>SmartSociety</h1>
+<div>
+<a href="#dashboard">Dashboard</a>
+<a href="#complaint">Raise Complaint</a>
+<a href="#status">Track Status</a>
+<a href="#team">Maintenance Team</a>
+</div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+<h2>Residential Complaint Management System</h2>
+<p>Report issues. Track progress. Improve society living.</p>
+<a href="#complaint" class="btn">Raise Complaint</a>
+</section>
+
+<!-- RESIDENT DASHBOARD -->
+
+<section id="dashboard">
+<h2>Resident Dashboard</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Total Complaints</h3>
+<p>12 Submitted</p>
+</div>
+
+<div class="card">
+<h3>In Progress</h3>
+<p>5 Issues Being Fixed</p>
+</div>
+
+<div class="card">
+<h3>Resolved</h3>
+<p>7 Completed</p>
+</div>
+
+<div class="card">
+<h3>Announcements</h3>
+<p>Water maintenance tomorrow 10 AM.</p>
+</div>
+
+</div>
+</section>
+
+<!-- COMPLAINT FORM -->
+
+<section id="complaint">
+<h2>Raise a Complaint</h2>
+
+<form>
+
+<input type="text" placeholder="Flat Number">
+
+<select>
+<option>Select Issue Type</option>
+<option>Plumbing</option>
+<option>Electricity</option>
+<option>Security</option>
+<option>Cleaning</option>
+<option>Other</option>
+</select>
+
+<textarea rows="5" placeholder="Describe the issue"></textarea>
+
+<input type="file">
+
+<button>Submit Complaint</button>
+
+</form>
+
+</section>
+
+<!-- STATUS TRACKING -->
+
+<section id="status">
+<h2>Complaint Status</h2>
+
+<table>
+<tr>
+<th>ID</th>
+<th>Issue</th>
+<th>Status</th>
+<th>Assigned To</th>
+<th>Contact</th>
+</tr>
+
+<tr>
+<td>#101</td>
+<td>Water Leakage</td>
+<td>In Progress</td>
+<td>Ravi Kumar</td>
+<td>📞 9876543210</td>
+</tr>
+
+<tr>
+<td>#102</td>
+<td>Lift Issue</td>
+<td>Completed</td>
+<td>Suresh</td>
+<td>📞 9876500000</td>
+</tr>
+
+</table>
+
+</section>
+
+<!-- MANAGEMENT TEAM -->
+
+<section id="team">
+<h2>Maintenance Team</h2>
+
+<div class="contact-card">
+<h3>Electrician</h3>
+<p>Ravi Kumar</p>
+<p>📞 9876543210</p>
+</div>
+
+<div class="contact-card">
+<h3>Plumber</h3>
+<p>Suresh</p>
+<p>📞 9876500000</p>
+</div>
+
+<div class="contact-card">
+<h3>Security Manager</h3>
+<p>Anand</p>
+<p>📞 9876511111</p>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 SmartSociety Management System</p>
+</footer>
+
+</body>
+</html>
